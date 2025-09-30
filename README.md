@@ -15,8 +15,24 @@ It makes your terminal stylish, functional, and developer-friendly.
 ---
 
 ## 🚀 Getting Started  
+### 🔹 1. Install Rust  
 
-### 1. Clone the repo  
+#### Windows  
+- Go to [https://rustup.rs](https://rustup.rs) and download `rustup-init.exe`  
+- Or install with **winget**:  
+  ```powershell
+  winget install Rustlang.Rustup
+  
+### 2. Clone the repo  
 ```bash
 git clone https://github.com/xavierfingers/superterm.git
 cd superterm
+### 3. Install reqirements
+
+cargo build
+
+### 3. Run
+
+rustc main.rs
+
+Enjoy!
