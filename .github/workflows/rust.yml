@@ -1,12 +1,8 @@
 name: Rust
-
 on:
    - push
    - pull_request
-   - workflow-dispatch
-env:
-  CARGO_TERM_COLOR: always
-
+   - workflow_dispatch
 jobs:
   build:
 
