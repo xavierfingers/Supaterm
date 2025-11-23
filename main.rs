@@ -5,21 +5,10 @@ use std::path::PathBuf;
 use std::process::Command;
 
 fn main() -> io::Result<()> {
-    println!("🔧 Setting up Powerline terminal customization...");
-
-    // Step 1: Detect home directory
-    let home_dir = dirs::home_dir().expect("Unable to find home directory");
-
+    println!("🔧 Setting up Powerline shell");
     // Step 2: Detect shell
     let shell = env::var("SHELL").unwrap_or_else(|_| "bash".to_string());
     println!("Detected shell: {}", shell);
-
-    let rc_file: PathBuf = if shell.contains("zsh") {
-        home_dir.join(".zshrc")
-    } else {
-        home_dir.join(".bashrc")
-    };
-
     // Step 3: Check if Powerline fonts are installed
     println!("Checking if Powerline fonts are installed...");
     let fc_list = Command::new("fc-list").output();
