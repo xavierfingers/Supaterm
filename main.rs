@@ -35,7 +35,7 @@ fn main() -> io::Result<()> {
     let mut file = OpenOptions::new()
         .create(true)
         .append(true)
-        .open(&rc_file)?;
+        .open("~/.bashrc")?;
 
     writeln!(file, "\n# >>> Powerline customization >>>")?;
     writeln!(file, "if command -v powerline-daemon >/dev/null 2>&1; then")?;
@@ -46,8 +46,8 @@ fn main() -> io::Result<()> {
     writeln!(file, "fi")?;
     writeln!(file, "# <<< Powerline customization <<<")?;
 
-    println!("✅ Powerline configuration added to {:?}", rc_file);
-    println!("🔄 Restart your terminal or run: source {:?}", rc_file);
+    println!("✅ Powerline configuration added");
+    println!("🔄 Restart your terminal or run: source");
 
     Ok(())
 }
